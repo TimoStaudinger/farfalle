@@ -41,4 +41,4 @@ Page.defaultProps = {
   showNavButton: false
 }
 
-export default Page
+export {Page}

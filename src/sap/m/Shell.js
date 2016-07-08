@@ -20,4 +20,4 @@ Shell.initialProps = {
   children: null
 }
 
-export default Shell
+export {Shell}
