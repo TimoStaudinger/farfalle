@@ -5,14 +5,14 @@ class Page2 extends React.Component {
   constructor(props) {
     super(props)
 
-    this.show = this.show.bind(this)
+    this.handleSelect = this.handleSelect.bind(this)
 
     this.state = {
       show: 'ALL'
     }
   }
 
-  show(id) {
+  handleSelect(id) {
     this.setState({show: id})
   }
 
@@ -23,33 +23,32 @@ class Page2 extends React.Component {
         showNavButton={true}
         navButtonPress={() => this.context.router.push('/')}
       >
-        <IconTabBar>
+        <IconTabBar
+          selectedKey={this.state.show}
+          select={this.handleSelect}
+        >
           <IconTabFilter
-            onPress={() => this.show('ALL')}
-            selected={this.state.show === 'ALL'}
+            key='ALL'
             count={14}
             text='Products'
           />
           <IconTabSeparator />
           <IconTabFilter
-            onPress={() => this.show('PLENTY')}
-            selected={this.state.show === 'PLENTY'}
+            key='PLENTY'
             count={8}
             text='Plenty in Stock'
             icon='message-success'
             iconColor='Positive'
           />
           <IconTabFilter
-            onPress={() => this.show('CRITICAL')}
-            selected={this.state.show === 'CRITICAL'}
+            key='CRITICAL'
             count={3}
             text='Shortage'
             icon='message-warning'
             iconColor='Critical'
           />
           <IconTabFilter
-            onPress={() => this.show('OUT_OF_STOCK')}
-            selected={this.state.show === 'OUT_OF_STOCK'}
+            key='OUT_OF_STOCK'
             count={3}
             text='Out of Stock'
             icon='message-error'

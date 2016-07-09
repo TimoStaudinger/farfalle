@@ -41,7 +41,10 @@ const IconTabFilter = (props) => {
       </div>
 
       <div className='sapMITBText'>
-        {props.text}
+        {props.upperCase && props.text ?
+          props.text.toUpperCase() :
+          props.text
+        }
       </div>
       <div className='sapMITBContentArrow' />
     </div>
@@ -49,17 +52,19 @@ const IconTabFilter = (props) => {
 }
 
 IconTabFilter.propTypes = {
-  count: PropTypes.element,
+  count: PropTypes.number,
   icon: PropTypes.string,
   iconColor: PropTypes.string,
   onPress: PropTypes.func,
-  text: PropTypes.element
+  text: PropTypes.string,
+  upperCase: PropTypes.bool
 }
 IconTabFilter.defaultProps = {
   count: null,
   icon: null,
   iconColor: 'Default',
-  text: null
+  text: null,
+  upperCase: false
 }
 
 export {IconTabFilter}
