@@ -1,5 +1,5 @@
 import React from 'react'
-import {Page, IconTabBar, IconTabSeparator, IconTabFilter} from './sap/m'
+import {Page, IconTabBar, IconTabSeparator, IconTabFilter, Text} from './sap/m'
 
 class Page2 extends React.Component {
   constructor(props) {
@@ -55,6 +55,7 @@ class Page2 extends React.Component {
             iconColor='Negative'
           />
         </IconTabBar>
+        <Text text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus dui ac tellus tincidunt maximus. Etiam auctor nisl sed magna volutpat finibus. Nunc risus lacus, dictum ac ipsum et, tristique sodales quam. Praesent rutrum ipsum est, quis aliquet mauris iaculis non. Suspendisse eu magna volutpat libero congue ornare tempus a mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur enim at urna mollis fringilla. Fusce fermentum porta euismod. Aenean nunc ex, viverra id augue ultricies, fermentum ultrices nulla. Curabitur lobortis molestie velit id tristique.' />
       </Page>
     )
   }
