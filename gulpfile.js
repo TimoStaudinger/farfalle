@@ -21,7 +21,7 @@ var TARGET_DIR = './build/';
 var MIN_DIR = './min/';
 
 var MODULES = {
-    'main': 'Main.js'
+    'sample': 'sample/Main.js'
 };
 
 function build(module) {

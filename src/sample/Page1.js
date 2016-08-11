@@ -1,5 +1,5 @@
 import React from 'react'
-import {Page, Button} from './sap/m'
+import {Page, Button} from '../sap/m'
 
 class Page1 extends React.Component {
   render() {
