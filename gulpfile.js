@@ -21,7 +21,8 @@ var TARGET = 'build';
 var MIN_DIR = 'min';
 
 var MODULES = {
-    'sandbox': './sample/sandbox/'
+    'sandbox': './sample/sandbox/',
+    'todo': './sample/todo/'
 };
 
 function build(module) {
