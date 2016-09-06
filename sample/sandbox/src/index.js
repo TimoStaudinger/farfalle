@@ -1,7 +1,7 @@
 import React from 'react'
 import {render} from 'react-dom'
 import {Router, Route, hashHistory} from 'react-router'
-import {App, Shell} from '../sap/m'
+import {App, Shell} from '../../../src/sap/m'
 import Page1 from './Page1'
 import Page2 from './Page2'
 

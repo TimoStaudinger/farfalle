@@ -16,18 +16,18 @@ var presetEs2015 = require("babel-preset-es2015");
 var presetReact = require("babel-preset-react");
 var _ = require('lodash');
 
-var SOURCE_DIR = './src/';
-var TARGET_DIR = './build/';
-var MIN_DIR = './min/';
+var SOURCE = 'src';
+var TARGET = 'build';
+var MIN_DIR = 'min';
 
 var MODULES = {
-    'sample': 'sample/Main.js'
+    'sandbox': './sample/sandbox/'
 };
 
 function build(module) {
-    var file = MODULES[module];
+    var dir = MODULES[module];
     var bundleStream = browserify({
-        entries: [SOURCE_DIR + file],
+        entries: [dir + SOURCE + '/index.js'],
         transform: [[babelify, {presets: [presetEs2015, presetReact]}], reactify],
         debug: true,
         cache: {}, packageCache: {}, fullPaths: false
@@ -38,9 +38,9 @@ function build(module) {
             .on('error', function (err) {
                 return notify().write(err);
             })
-            .pipe(source(file))
+            .pipe(source(dir))
             .pipe(rename({dirname: '', basename: module, extname: '.js'}))
-            .pipe(gulp.dest(TARGET_DIR))
+            .pipe(gulp.dest(dir + TARGET))
             .pipe(notify('Module built: ' + module));
     };
 

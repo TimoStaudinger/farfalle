@@ -1,5 +1,5 @@
 import React from 'react'
-import {Page, IconTabBar, IconTabSeparator, IconTabFilter, Text} from '../sap/m'
+import {Page, IconTabBar, IconTabSeparator, IconTabFilter, Text} from '../../../src/sap/m'
 
 class Page2 extends React.Component {
   constructor(props) {
