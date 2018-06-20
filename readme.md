@@ -1,8 +1,5 @@
-# React OpenUI5
-A react based implementation of the OpenUI5 framework.
+# Farfalle
+
+SAP Fiori UX as React components. Purely experimental at this point.
 
 ![Sample](sample.gif)
-
-## Build
-
-    gulp js-build
